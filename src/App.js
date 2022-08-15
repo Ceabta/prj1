@@ -1,5 +1,4 @@
 import './App.css';
-import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoas from './components/Pessoas';
 
@@ -21,4 +20,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
