@@ -24,8 +24,8 @@ function App() {
         foto="https://via.placeholder.com/150"
       />
       <List />
+      <h1>Testando Eventos</h1>
       <Evento numero="1"/>
-      <Evento numero="2"/>
       <Form /> 
     </div>
   )
