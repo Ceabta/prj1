@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import SayMyName from './components/SayMyName';
 import Pessoas from './components/Pessoas';
 import Frase from './components/Frase';
@@ -7,11 +8,13 @@ import Evento from './components/Eventos';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 function App() {
-  const nome = "Maria"
-
   const meusItens = ['React','Vue','Angular']
+
+  const [nome, setNome] = useState()
 
   return (
     <div className="App">
@@ -20,7 +23,6 @@ function App() {
       <Frase />
       <SayMyName nome="Matheus"/>
       <SayMyName nome="João"/>
-      <SayMyName nome={nome}/>
       <Pessoas 
         nome="Leonardo" 
         idade="18" 
@@ -44,6 +46,11 @@ function App() {
       <h1>Renderização de Listas</h1>
       <OutraLista itens={meusItens}/>
       <OutraLista itens={[]}/>
+      <hr/><hr/>
+      {/* ----------------------------------------------------- */}
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome} />
+      <Saudacao nome={nome}/>
     </div>
   )
 }
